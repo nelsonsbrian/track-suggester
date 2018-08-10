@@ -10,7 +10,7 @@ label {
   text-align: center;
 }
 
-.no-survey, .survey-complete {
+.no-survey, .survey-complete, .no-info {
   display: none;
 }
 

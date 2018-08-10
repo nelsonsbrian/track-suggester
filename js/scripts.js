@@ -4,18 +4,30 @@ $(document).ready(function() {
   var tally2 = 0;
   var tally3 = 0;
   var iName;
-  var iaddress;
-  var iemail;
+  var iAddress;
+  var iEmail;
   var survey_rec;
 
   $("button#complete-reccommendation").click(function() {
+    iName = $("#rec-name").val();
+    iAddress = $("#rec-address").val();
+    iEmail = $("#rec-email").val();
     if (tally1 === 0 && tally2 === 0 && tally3 === 0) {
       $(".no-survey").show();
       $(".survey-complete").hide();
+      $(".no-info").hide();
+    } else if (iName.length === 0 || iAddress.length === 0 || iEmail.length === 0) {
+      $(".no-survey").hide();
+      $(".survey-complete").hide();
+      $(".no-info").show();
     } else {
+      $(".no-info").hide();
       $(".no-survey").hide();
       $(".survey-complete").show();
       $(".survey-complete-text").text(survey_rec);
+      $(".rec-name").text(iName);
+      $(".rec-address").text(iAddress);
+      $(".rec-email").text(iEmail);
     }
   });
 
@@ -55,27 +67,19 @@ $(document).ready(function() {
       }
     };
 
-    alert("1: " + tally1 + " 2: " + tally2 + " 3: " + tally3)
     if (tally1 > tally2 && tally1 > tally3) {
-      alert("sequence#1");
       survey_rec = "Ruby/Rails";
     } else if (tally2 > tally1 && tally2 > tally3) {
-      alert("sequence#2");
       survey_rec = "CSS/React";
     } else if (tally3 > tally1 && tally3 > tally2) {
-      alert("sequence#3");
       survey_rec = "C#/.Net";
     } else if (tally1 === tally2 && tally1 === tally3 && tally2 === tally3) {
-      alert("sequence#4");
       survey_rec = "Ruby/Rails or CSS/React or C#/.Net";
     } else if (tally1 === tally2) {
-      alert("sequence#5");
       survey_rec = "Ruby/Rails or CSS/React";
     } else if (tally2 === tally3) {
-      alert("sequence#6");
       survey_rec = "CSS/React or C#/.Net";
     } else if (tally1 === tally3) {
-      alert("sequence#7");
       survey_rec = "Ruby/Rails or C#/.Net";
     } else {
       survey_rec = "Please refresh page and refill out the survey"
