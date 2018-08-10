@@ -14,17 +14,66 @@
   display: none;
 } */
 
-
-div.custom-col2 {
+div.custom-col2, .page-footer {
   padding: 15px;
-  background-color: red;
-  border-left: solid 15px yellow;
-  border-right: solid 30px yellow;
-  border-bottom: solid 30px green;
+  background: linear-gradient(to top right, #5143e8, #9387ff);
+;
+  border-left: solid 15px #181538;
+  border-right: solid 30px #2d257a;
+  border-bottom: solid 40px #2d257a;
+  border-top: solid 20px #181538;
   margin: 15px;
+  border-radius: 13px;
+}
+
+h1 {
+  font-family: 'Exo 2', sans-serif
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: 1900px;
 }
 
 h3 {
   text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+button.btn-primary {
+  background-color: #4938f7;
+  border-color: #2d257a;
+  box-shadow : 0 0 0 0.2rem #2d257a;
+}
+
+button.btn-primary:hover {
+  background-color: #b037f7;
+  color: black;
+  font-weight: bold;
+}
+
+h2 {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+p.intro-text {
+    text-align: center;
+    color: #595c60;
+}
+
+p.survey-question {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+#reccommendation label {
+  font-weight: bold;
+  font-size: 20px;
   text-decoration: underline;
 }
