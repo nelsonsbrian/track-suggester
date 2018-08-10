@@ -11,13 +11,12 @@ $(document).ready(function() {
   $("button#complete-reccommendation").click(function() {
     if (tally1 === 0 && tally2 === 0 && tally3 === 0) {
       $(".no-survey").show();
-      $(".survey_rec").hide();
+      $(".survey-complete").hide();
     } else {
       $(".no-survey").hide();
-      $(".survey_rec").show();
-      $(".survey-complete").text(survey_rec);
+      $(".survey-complete").show();
+      $(".survey-complete-text").text(survey_rec);
     }
-
   });
 
 
@@ -53,8 +52,6 @@ $(document).ready(function() {
         } else if ((eval("answer" + i) < 20) && (eval("answer" + i) >= 10)) {
           tally1++;
         }
-        $(".no-survey").hide();
-        $(".survey_complete").show();
       }
     };
 
@@ -84,6 +81,8 @@ $(document).ready(function() {
       survey_rec = "Please refresh page and refill out the survey"
     }
     $(".survey-complete-text").text(survey_rec);
+    $(".survey-complete").show();
+    $(".no-survey").hide();
   });
 
 
