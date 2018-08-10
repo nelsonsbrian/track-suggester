@@ -5,3 +5,11 @@ label {
 .indentable {
   text-indent: 2em;
 }
+
+.to-center {
+  text-align: center;
+}
+
+.survey_rec, .survey-complete {
+  display: none;
+}
